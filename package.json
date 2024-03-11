@@ -1,7 +1,7 @@
 {
     "name": "oink-format",
     "private": false,
-    "version": "1.5.6",
+    "version": "1.5.7",
     "main": "/src/index.js",
     "repository": "https://github.com/xrsphp/oink-format.git",
     "author": "oink0625",
