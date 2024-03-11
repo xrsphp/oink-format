@@ -1,0 +1,57 @@
+{
+    "name": "oink-format",
+    "private": false,
+    "version": "1.5.4",
+    "main": "/src/index.js",
+    "repository": "https://github.com/xrsphp/oink-format.git",
+    "author": "oink0625",
+    "license": "MIT",
+    "description": "能自动取消重复请求的axios封装",
+    "type": "module",
+    "files": [
+        "dist",
+        "example",
+        "src",
+        "package.json",
+        "readme.md",
+        "LICENSE"
+    ],
+    "keywords": [
+        "取消重复请求",
+        "axios",
+        "请求",
+        "请求库",
+        "http",
+        "https",
+        "ajax",
+        "fetch",
+        "response",
+        "post",
+        "get",
+        "put",
+        "patch",
+        "delete"
+    ],
+    "dependencies": {
+        "axios": "^1.2.0",
+        "qs": "^6.11.0"
+    },
+    "scripts": {
+        "test": "node example",
+        "build": "rollup -c"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.19.3",
+        "@babel/core": "^7.20.5",
+        "@babel/preset-env": "^7.20.2",
+        "@rollup/plugin-json": "^5.0.2",
+        "rollup": "^3.5.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-eslint": "^7.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-replace": "^2.2.0",
+        "rollup-plugin-uglify": "^6.0.4",
+        "prettier": "^2.8.0"
+    }
+}
