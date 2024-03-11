@@ -1,28 +1,53 @@
 {
   "name": "oink-format",
-  "version": "1.0.0",
-  "description": "common toolkit",
+  "version": "1.2.13",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "types": "index.d.ts",
+  "napi": {
+    "name": "oink-format",
+    "triples": {
+      "additional": [
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "aarch64-unknown-linux-gnu",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "x86_64-unknown-linux-musl",
+        "x86_64-unknown-freebsd",
+        "i686-pc-windows-msvc",
+        "armv7-linux-androideabi",
+        "universal-apple-darwin",
+        "riscv64gc-unknown-linux-gnu"
+      ]
+    }
   },
+  "bin": "teo.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xrsphp/oink-format.git"
+    "url": "https://github.com/xrsphp/oink-format"
   },
-  "keywords": [
-    "format"
-  ],
-  "author": "oink0625",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xrsphp/oink-format/issues"
-  },
+  "license": "Apache-2.0",
   "dependencies": {
-    "crypto-price-checker-oooooyoung": "^1.0.1",
-    "ethers": "^5.7.2",
-    "lodash": "^4.17.21",
-    "node-fetch": "^2.7.0"
+    "decimal.js": "^10.4.3"
   },
-  "homepage": "https://github.com/xrsphp/oink-format#readme"
+  "devDependencies": {
+    "@napi-rs/cli": "^2.14.8",
+    "ava": "^5.1.1"
+  },
+  "ava": {
+    "timeout": "3m"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release --pipe \"node ./scripts/fixFiles.js\"",
+    "build:debug": "napi build --platform --pipe \"node ./scripts/fixFiles.js\"",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "universal": "napi universal",
+    "version": "napi version"
+  }
 }
