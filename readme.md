@@ -1,4 +1,4 @@
-# drrq
+# oink-foramt
 
     能自动取消重复请求的axios封装( duplicate removal request)
 
@@ -12,25 +12,25 @@
 
 #### 安装
 
-    npm i drrq  ||  cnpm i drrq  ||  pnpm i drrq
+    npm i oink-foramt  ||  cnpm i oink-foramt  ||  pnpm i oink-foramt
 
 #### 使用
 
 ```js
-	import drrq from 'drrq';
+	import oink-foramt from 'oink-foramt';
 
 	// get
-	drrq.get(url, data);
+	oink-foramt.get(url, data);
 
 	// post
-	drrq.post(url, data);
+	oink-foramt.post(url, data);
 
 	// post 请求不去重
-	drrq.post(url, data, false);
+	oink-foramt.post(url, data, false);
 
 	// file
-	drrq.file(url, data);
+	oink-foramt.file(url, data);
 
 	// 完整写法  请求方式，url，参数，请求头，是否去重，是否为文件上传
-	drrq.request(method, url, params, headers, preventRepeat = true, uploadFile = false);
+	oink-foramt.request(method, url, params, headers, preventRepeat = true, uploadFile = false);
 ```
